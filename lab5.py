@@ -4,6 +4,8 @@ import string
 
 replacement_dict = {}
 
+string.punctuation
+
 print("Choose 5 characters (lowercase only) and assign 3 replacement options each:")
 other_replacements = set()
 for _ in range(5):
@@ -18,7 +20,7 @@ for _ in range(5):
     replacements = set()
     while len(replacements) < 3:
         replacement = input(f"Enter a replacement for '{letter}': ")
-        if len(replacement) == 1 and replacement not in replacements and replacement not in other_replacements:
+        if len(replacement) == 1 and replacement not in replacements and replacement not in other_replacements and replacement in string.punctuation:
             replacements.add(replacement)
             other_replacements.add(replacement)
         else:
